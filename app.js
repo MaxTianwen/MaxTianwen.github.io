@@ -44,6 +44,8 @@
  }
  const schedule=()=>{if(!frame)frame=requestAnimationFrame(update)};
  const resize=()=>{root.style.setProperty('--header-height',header.getBoundingClientRect().height+'px');schedule()};
- new ResizeObserver(resize).observe(header);resize();addEventListener('scroll',schedule,{passive:true});addEventListener('resize',resize,{passive:true});
+ // Establish the desktop story layout before native initial fragment positioning.
+ root.style.setProperty('--header-height',header.getBoundingClientRect().height+'px');update();
+ new ResizeObserver(resize).observe(header);addEventListener('scroll',schedule,{passive:true});addEventListener('resize',resize,{passive:true});
  reduced.addEventListener('change',schedule);wide.addEventListener('change',schedule);document.addEventListener('focusin',schedule);document.fonts?.ready.then(schedule);
 })();
