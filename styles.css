@@ -107,3 +107,6 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height) + 24px)
 @media print{.story-content{opacity:1!important;transform:none!important}}
 
 .story-context .story-content>p:not(.project-label){font-size:22px;line-height:1.5}@media(max-width:760px){.story-context .story-content>p:not(.project-label){font-size:20px}}
+
+/* Optional project walkthrough stays inside the existing disclosure. */
+.demo-steps{padding-left:1.4em;margin:18px 0}.demo-steps li+li{margin-top:14px}.demo-walkthrough{margin-top:22px}.demo-walkthrough img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;margin-top:12px}.demo-walkthrough a{text-decoration:underline;text-underline-offset:3px}

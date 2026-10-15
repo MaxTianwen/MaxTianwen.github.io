@@ -1,6 +1,11 @@
 /* Viewport-relative presentation. Native scrolling and content order are unchanged. */
 (()=>{
  const root=document.documentElement,header=document.querySelector('.site-header');
+ const portrait=document.querySelector('.portrait-view'),photo=portrait?.querySelector('img[data-full-src]');
+ // Keep the supplied original intact; fetch it only when the visitor opens the photograph.
+ portrait?.addEventListener('toggle',()=>{
+  if(portrait.open&&photo?.dataset.fullSrc){photo.removeAttribute('srcset');photo.src=photo.dataset.fullSrc;delete photo.dataset.fullSrc;}
+ });
  const credits=document.querySelector('#image-credits');
  const revealCredits=()=>{if(credits&&location.hash==='#image-credits')credits.open=true};
  // Open the native disclosure before the browser follows its in-page anchor.
