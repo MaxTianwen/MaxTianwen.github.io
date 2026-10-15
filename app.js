@@ -1,6 +1,13 @@
 /* Viewport-relative presentation. Native scrolling and content order are unchanged. */
 (()=>{
  const root=document.documentElement,header=document.querySelector('.site-header');
+ const credits=document.querySelector('#image-credits');
+ const revealCredits=()=>{if(credits&&location.hash==='#image-credits')credits.open=true};
+ // Open the native disclosure before the browser follows its in-page anchor.
+ document.addEventListener('click',event=>{
+  if(event.target instanceof Element&&event.target.closest('a[href="#image-credits"]')&&credits)credits.open=true;
+ });
+ addEventListener('hashchange',revealCredits);revealCredits();
  const sections=[...document.querySelectorAll('main>section')],links=[...document.querySelectorAll('nav a')];
  const reduced=matchMedia('(prefers-reduced-motion:reduce)'),wide=matchMedia('(min-width:1000px) and (min-height:650px)');
  const scenes=[...document.querySelectorAll('.project-row')];
