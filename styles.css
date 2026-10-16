@@ -137,3 +137,14 @@ html.motion-enabled .story-build .story-content{opacity:1;transform:none}
 body{background:#fbf8f2}
 .site-header{background:#fbf8f2f5;border-bottom-color:#e4e2dc}
 #projects{background:#eef3f8}
+
+/* Hero: direction, background, availability, actions, then learning. */
+.hero-copy .hero-statement{font-size:30px;line-height:1.3;letter-spacing:-.5px;margin-top:20px;max-width:25ch}
+.hero-copy .hero-intro{font-size:18px;line-height:1.65;margin-top:14px;max-width:42ch}
+.hero-copy .availability{margin-top:24px;padding-left:14px;border-left:2px solid var(--blue);font-size:14px;line-height:1.6}
+.hero-copy .availability span,.hero-copy .availability strong{display:block}
+.hero-copy .availability strong{font-size:16px;margin-top:3px}
+.hero-copy .hero-actions{margin-top:22px}
+.hero-copy .learning-note{font-size:15px;line-height:1.6;margin-top:16px;color:var(--muted)}
+@media(max-width:760px){.hero-copy .hero-statement{font-size:26px;margin-top:18px}.hero-copy .hero-intro{font-size:17px}.hero-copy .availability{margin-top:20px}.hero-copy .availability strong{font-size:15px}.hero-copy .hero-actions{margin-top:20px}}
+@media(max-width:370px){.hero-copy .hero-statement{font-size:24px}.hero-copy .hero-actions{gap:18px}.hero-copy .hero-actions .button{font-size:15px;padding-inline:16px;gap:12px;white-space:nowrap}.hero-copy .hero-actions .text-link{font-size:15px;gap:12px}}
