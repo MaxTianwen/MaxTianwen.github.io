@@ -110,3 +110,17 @@ html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height) + 24px)
 
 /* Optional project walkthrough stays inside the existing disclosure. */
 .demo-steps{padding-left:1.4em;margin:18px 0}.demo-steps li+li{margin-top:14px}.demo-walkthrough{margin-top:22px}.demo-walkthrough img{width:100%;height:auto;border:1px solid var(--line);border-radius:6px;margin-top:12px}.demo-walkthrough a{text-decoration:underline;text-underline-offset:3px}
+
+/* Reading and disclosure refinements; preserve the accepted visual hierarchy. */
+.project-details summary,.image-credits summary{min-height:44px;padding-block:10px}
+.demo-walkthrough img{cursor:zoom-in}
+.demo-image-hint{font-size:14px;color:var(--muted);margin-top:8px}
+.experience-photo figcaption,.education-photo figcaption{font-size:13px;line-height:1.55}
+
+.direction-icon{display:inline-block;width:1em;height:1em;vertical-align:-.12em;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;flex:none}
+/* Actionable implementation content stays legible throughout the scroll scene. */
+html.motion-enabled .story-build .story-content{opacity:1;transform:none}
+@media(min-width:1000px) and (min-height:650px) and (prefers-reduced-motion:no-preference){
+ html.story-motion .story-context{min-height:340px;padding-bottom:64px}
+ html.story-motion .story-contribution{min-height:280px;padding-bottom:64px}
+}
