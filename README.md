@@ -17,4 +17,4 @@ The portrait is supplied by Tianwen Wang for this portfolio; public availability
 ## Root-site hosting
 
 Canonical site: https://maxtianwen.github.io/
-Hosted from MaxTianwen/maxtianwen.github.io main, repository root. Migration preserves published portfolio1143bb9 content; the separate unaccepted Hero candidate is not included. Former project URL redirects only after this root site is verified healthy. Third-party licenses and portrait permissions remain unchanged.
+Hosted from MaxTianwen/maxtianwen.github.io main, repository root. The approved Hero hierarchy update was published in commit 04be4c5 after the root-site migration. The former /portfolio-website/ URL redirects to this root site through the separate portfolio-website repository. Future portfolio changes belong in this root-site repository; keep the former repository for redirect maintenance. Third-party licenses and portrait permissions remain unchanged.
