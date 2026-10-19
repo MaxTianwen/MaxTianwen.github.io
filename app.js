@@ -23,7 +23,8 @@
   try{
    const enabled=!reduced.matches,sticky=enabled&&wide.matches;
    root.classList.toggle('story-motion',sticky);
-   const boundary=header.getBoundingClientRect().bottom;
+   // Short viewports let the header scroll away; never measure above the viewport.
+   const boundary=Math.max(0,header.getBoundingClientRect().bottom);
    let current=sections[0];for(const s of sections)if(s.getBoundingClientRect().top<=boundary+160)current=s;
    if(scrollY+innerHeight>=document.documentElement.scrollHeight-3)current=sections.at(-1);
    for(const a of links)a.hash==='#'+(current.dataset.nav||current.id)?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current');
