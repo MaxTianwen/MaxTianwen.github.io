@@ -155,3 +155,9 @@ body{background:#fbf8f2}
 @media(max-width:760px){.site-header nav a{padding-block:11px;margin-block:-11px}.site-header nav a[aria-current="location"]::after{bottom:4px}.site-header nav a:focus-visible{outline-offset:0}}
 /* Short landscape viewports: the header scrolls away instead of covering the content. */
 @media(max-height:500px){.site-header{position:absolute}html{scroll-padding-top:16px}}
+/* Phones: scroll-linked motion eases toward its target so fast flicks still read as movement. */
+@media(max-width:760px) and (prefers-reduced-motion:no-preference){
+ html.motion-enabled .project-image,html.motion-enabled .project-visual::before{transition:transform .35s cubic-bezier(.2,.7,.2,1)}
+ html.motion-enabled .story-content{transition:opacity .35s ease-out,transform .35s cubic-bezier(.2,.7,.2,1)}
+ html.motion-enabled .story-content:focus-within{transition:none}
+}
