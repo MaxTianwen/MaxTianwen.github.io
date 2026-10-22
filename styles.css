@@ -161,3 +161,23 @@ body{background:#fbf8f2}
  html.motion-enabled .story-content{transition:opacity .5s ease-out,transform .5s cubic-bezier(.2,.7,.2,1)}
  html.motion-enabled .story-content:focus-within{transition:none}
 }
+/* Phones: one wordmark row above the navigation; scrolling down tucks the wordmark row away. */
+@media(max-width:760px){.header-inner .button-small{display:none}.header-inner{min-height:0;grid-template-columns:1fr;padding:12px 0 10px;row-gap:8px}html.header-compact{--header-visible:calc(var(--header-height) - var(--header-shift))}html{scroll-padding-top:calc(var(--header-visible,var(--header-height)) + 18px)}}
+@media(max-width:760px) and (min-height:501px){.site-header{transition:transform .25s ease}.site-header .wordmark{transition:opacity .2s,visibility .2s}html.header-compact .site-header{transform:translateY(calc(-1 * var(--header-shift)))}html.header-compact .site-header .wordmark{opacity:0;visibility:hidden}}
+/* Full-size screenshot viewer. */
+.image-zoom{display:block;cursor:zoom-in}
+.lightbox{width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:transparent;color:#fff;overflow:hidden}
+.lightbox[open]{display:grid;grid-template-rows:auto minmax(0,1fr)}
+.lightbox::backdrop{background:#0d1824eb}
+.lightbox-bar{display:flex;justify-content:flex-end;gap:10px;padding:12px 16px}
+.lightbox-bar a,.lightbox-bar button{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1px solid #ffffff4d;border-radius:7px;background:#ffffff1a;color:#fff;font:700 15px Manrope,sans-serif;cursor:pointer}
+.lightbox-bar a:hover,.lightbox-bar button:hover{color:#fff;background:#ffffff33}
+.lightbox-bar a:focus-visible,.lightbox-bar button:focus-visible{outline:3px solid #a8c5ff;outline-offset:2px}
+.lightbox-frame{display:grid;min-height:0;padding:0 16px 16px;overflow:auto;overscroll-behavior:contain}
+.lightbox img{place-self:center;max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;border-radius:4px;box-shadow:0 20px 60px #0008;cursor:zoom-out}
+.lightbox-hint{display:none}
+/* Phones: a landscape screenshot fills the viewer height and pans sideways instead of shrinking to the screen width. */
+@media(max-width:760px){.lightbox-frame{place-items:center start}.lightbox img{place-self:center start;max-width:none;max-height:none;height:calc(100vh - 84px);height:calc(100dvh - 84px)}.lightbox-hint{display:block;margin-right:auto;align-self:center;font-size:14px;color:#c8d6e6}}
+html.lightbox-open{overflow:hidden}
+/* Contact: profile links share one row and wrap on narrow screens. */
+.contact-profiles{display:flex;flex-wrap:wrap;gap:14px 36px}.contact-profiles .text-link{min-height:44px;font-size:16px;color:#d5e3f4;border:0;padding-bottom:0;gap:25px}
