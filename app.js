@@ -69,7 +69,8 @@
     for(const step of row.querySelectorAll('.story-step')){
      const rect=step.getBoundingClientRect();
      const entry=ease(clamp((innerHeight*.9-rect.top)/(innerHeight*.48)));
-     step.style.setProperty('--entry-opacity',String(entry));step.style.setProperty('--entry-lift',(64*(1-entry))+'px');
+     // Desktop story text starts partly visible so a quick scan can still read it.
+     step.style.setProperty('--entry-opacity',String(sticky?.35+.65*entry:entry));step.style.setProperty('--entry-lift',(64*(1-entry))+'px');
      step.classList.toggle('is-current',rect.top<innerHeight*.65&&rect.bottom>boundary+60);
     }
    }
