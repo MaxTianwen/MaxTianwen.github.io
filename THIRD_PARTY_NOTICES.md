@@ -7,7 +7,6 @@
 
 ## Photographs
 
-- assets/experience-context.webp: Beijing skyline by chen zy, https://unsplash.com/photos/a-view-of-a-city-skyline-at-sunset-Tk2-PENhSHo . Unsplash License: https://unsplash.com/license . Resized to 1100x825 and converted to WebP, with a CSS crop. Contextual photograph, not presented as the owner's workplace.
 - assets/wuppertal-green-flags.webp: GER Wuppertal Universität 027 2016 - Fahnen Gaußstraße, photograph by Der-wuppertaler. Source: https://commons.wikimedia.org/wiki/File:GER_Wuppertal_Universit%C3%A4t_027_2016_-_Fahnen_Gau%C3%9Fstra%C3%9Fe.jpg . Original 3264x2448; cropped to x=0, y=230, width=3264, height=1836, resized to 960x540 and converted to WebP. This adapted image is distributed under CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/ . The license applies to this photograph independently of the site code and other assets. Contextual photograph, not the portfolio owner’s photograph.
 - assets/tianwen-wang.jpg: original portrait provided by Tianwen Wang, used with permission for this portfolio. No general reuse license is granted.
 - assets/tianwen-wang-360.webp and assets/tianwen-wang-720.webp: resized display copies of the same supplied photograph, retaining its full composition. The original JPEG remains unchanged and loads on expansion. assets/social-preview.jpg combines the same photograph with the portfolio's own typography and text; it grants no additional reuse rights.
