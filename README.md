@@ -6,6 +6,8 @@ English personal portfolio for software and data opportunities. Built with HTML,
 
 Serve this directory with a static HTTP server. The entry point is `index.html`; assets use relative paths. On GitHub Pages, publish the repository root from the selected branch. `.nojekyll` keeps the files as a plain static site. No custom-domain file is needed for a default github.io address.
 
+Visits are counted with GoatCounter (https://maxtianwen.goatcounter.com), which sets no cookies and stores no personal identifiers. Opening https://maxtianwen.github.io/#toggle-goatcounter in a browser stops that browser's own visits from being counted.
+
 The interface respects reduced-motion preferences. Normal motion supports image expansion and staged text entry across viewport sizes. Keyboard focus and unavailable JavaScript preserve readable content.
 
 ## Content and reuse
